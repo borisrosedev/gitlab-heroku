@@ -1,9 +1,18 @@
 = GitLab CI/CD
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
 
 GitLab CI/CD permet d'automatiser ces processus grâce aux fichiers .gitlab-ci.yml.
 
 == Création d’un fichier .gitlab-ci.yml
-Le fichier .gitlab-ci.yml est utilisé pour définir les étapes et les jobs du pipeline GitLab CI/CD. Il est placé à la racine du dépôt Git et suit la syntaxe YAML.
+
+Le fichier .gitlab-ci.yml est utilisé pour définir les étapes et les jobs du pipeline GitLab CI/CD. 
+
+
+Il est placé à la racine du dépôt Git et suit la syntaxe YAML.
 
 === Exemple de .gitlab-ci.yml
 
@@ -41,15 +50,21 @@ GitLab Runner est un agent qui exécute les tâches définies dans le pipeline. 
 .Commandes pour installer un GitLab Runner sur Linux
 [source,bash]
 
-Ajouter le dépôt officiel
+=== ...
+
+* Ajouter le dépôt officiel
 
 curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
 
-Installer le runner
+=== ...
 
-sudo apt install gitlab-runner
+* Installer le runner
 
-Enregistrer le runner
+* sudo apt install gitlab-runner
+
+* Enregistrer le runner
+
+=== ...
 
 sudo gitlab-runner register
 
@@ -57,9 +72,17 @@ sudo gitlab-runner register
 
 Utiliser des images Docker adaptées pour chaque étape.
 
+
+=== ...
+
 Définir des caches pour optimiser les performances.
 
+
+=== ...
+
 Utiliser des variables d'environnement pour la sécurité.
+
+=== ...
 
 Déclencher les déploiements manuellement en cas de besoin avec des manual jobs.
 

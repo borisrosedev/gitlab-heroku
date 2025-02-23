@@ -1,13 +1,25 @@
 = 4. Tags et versions (Git Tag, Git Checkout Tags)
 
-=== 🔹 Utilisation des Tags
-Un tag dans Git est une référence immuable à un commit spécifique. Il est souvent utilisé pour marquer des versions logicielles.
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
 
-Créer un tag annoté :
+
+== 🔹 Utilisation des Tags
+
+Un tag dans Git est une référence immuable à un commit spécifique. 
+
+=== ...
+
+Il est souvent utilisé pour marquer des versions logicielles.
+
+
+=== Créer un tag annoté :
 
 git tag -a v1.0 -m "Version 1.0"
 
-Lister tous les tags :
+
+=== Lister tous les tags :
 
 git tag
 
@@ -21,11 +33,19 @@ git tag -d v1.0
 git push origin --delete v1.0
 
 === 🔹 Basculer sur une version spécifique
+
 Si vous souhaitez récupérer une version spécifique marquée par un tag, utilisez :
+
+
+=== ...
 
 git checkout v1.0
 
+=== ...
+
 Cela met le dépôt en mode détaché (detached HEAD), signifiant que vous ne pouvez pas directement committer sur cette version.
+
+=== ...
 
 Si vous souhaitez modifier le code à partir de cette version :
 

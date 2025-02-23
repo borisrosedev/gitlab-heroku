@@ -1,4 +1,9 @@
 = Intégration de Heroku avec GitLab CI/CD
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
 
 Heroku peut être intégré avec GitLab CI/CD afin d'automatiser le déploiement des applications à chaque mise à jour du code. Cette intégration permet une gestion efficace des pipelines CI/CD.
 

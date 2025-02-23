@@ -1,0 +1,25 @@
+{
+  "name": "git-lab-heroku",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "convert": "npx asciidoctor-revealjs *.adoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/borisrosedev/gitlab-heroku.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/borisrosedev/gitlab-heroku/issues"
+  },
+  "homepage": "https://github.com/borisrosedev/gitlab-heroku#readme",
+  "description": "",
+  "dependencies": {
+    "@asciidoctor/reveal.js": "^5.2.0",
+    "asciidoctor": "^3.0.4"
+  }
+}

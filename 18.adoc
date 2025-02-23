@@ -1,4 +1,8 @@
 = Stratégies de Branching : Git Flow et GitHub Flow
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
 
 == 1. Introduction
 

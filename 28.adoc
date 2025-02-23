@@ -1,6 +1,12 @@
 = Création d'une application sur Heroku
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
 
-Heroku permet de déployer rapidement des applications via la ligne de commande. Voici les étapes essentielles pour créer et déployer une application sur Heroku.
+== Introduction
+
+
+Heroku permet de déployer rapidement des applications via la ligne de commande. 
 
 == Prérequis
 

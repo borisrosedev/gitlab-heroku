@@ -1,6 +1,16 @@
 = Comparaison de Heroku avec d'autres PaaS
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
 
-Heroku est une plateforme cloud en tant que service (PaaS) qui simplifie le déploiement et la gestion des applications. Comparons-le avec d'autres solutions populaires : AWS Elastic Beanstalk, Netlify et Vercel.
+== Introduction
+
+Heroku est une plateforme cloud en tant que service (PaaS) qui simplifie le déploiement et la gestion des applications. 
+
+
+=== ...
+
+Comparons-le avec d'autres solutions populaires : AWS Elastic Beanstalk, Netlify et Vercel.
 
 == Installation et configuration de l'Heroku CLI
 

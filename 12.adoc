@@ -1,4 +1,8 @@
 = Différences entre GitHub, GitLab et Bitbucket
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
 
 == 1. Introduction
 GitHub, GitLab et Bitbucket sont trois plateformes majeures de gestion de code source basées sur Git. 
@@ -6,6 +10,9 @@ GitHub, GitLab et Bitbucket sont trois plateformes majeures de gestion de code s
 === ...
 
 Elles permettent l'hébergement de dépôts Git, la gestion de projets collaboratifs et l'intégration continue (CI/CD).
+
+
+=== ...
 
 Ce document compare ces plateformes sur plusieurs critères essentiels.
 
@@ -103,19 +110,41 @@ Ce document compare ces plateformes sur plusieurs critères essentiels.
 == 3. Détails et Cas d'Usage
 
 === 3.1 GitHub
+
 * Plateforme la plus populaire, idéale pour l'open source.
+
+=== ...
+
 * Utilisé principalement pour les **projets publics et privés**.
+
+=== ...
+
 * Intégration forte avec **GitHub Actions** et **GitHub Copilot**.
+
+=== ...
+
 * Recommandé pour les startups et les équipes collaborant avec une large communauté.
 
 === 3.2 GitLab
 * Offre un **outil complet DevOps** avec CI/CD natif.
+
+=== ...
+
 * Meilleur choix pour les entreprises ayant besoin **d'un auto-hébergement** et d'un contrôle total.
+
+=== ...
+
 * Son modèle GitLab Flow permet un **workflow plus structuré**.
+
+=== ...
+
 * Supporte **Kubernetes et Docker** de manière avancée.
 
 === 3.3 Bitbucket
 * Idéal pour les équipes utilisant **Jira** et l'écosystème Atlassian.
+
+=== ...
+
 * Offre un bon compromis entre **GitHub et GitLab** pour les entreprises travaillant avec **des workflows agiles**.
 * Support de Mercurial abandonné en 2020.
 * Bonne intégration avec **Bitbucket Pipelines** pour les déploiements automatisés.

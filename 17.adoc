@@ -1,24 +1,47 @@
 = Fork et Merge Requests dans GitLab
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
 
 == 1. Introduction
+
+
 GitLab facilite la collaboration sur les projets Git en permettant aux développeurs de travailler sur des copies indépendantes de dépôts existants (*forks*) et de proposer des modifications via les *Merge Requests* (MR).
 
 
 == 2. Qu'est-ce qu'un Fork ?
-Un **Fork** est une copie d’un dépôt Git qui appartient à un autre utilisateur ou groupe. Il permet :
+
+
+Un **Fork** est une copie d’un dépôt Git qui appartient à un autre utilisateur ou groupe. 
+
+=== ...
+
+Il permet :
 - D'expérimenter librement sans affecter le projet original.
 - De proposer des améliorations sans être membre du projet principal.
 - De contribuer à des projets open-source.
 
 === 🔹 Étapes pour créer un Fork sur GitLab :
-1. **Accéder au dépôt GitLab** que vous souhaitez forker.
-2. **Cliquer sur "Fork"** (bouton en haut à droite).
-3. **Sélectionner l’espace personnel ou un groupe** où créer le Fork.
-4. **Le Fork est maintenant disponible dans votre propre espace GitLab.**
 
-🔹 **Exemple d'URL avant/après Fork** :
-- Projet original : `https://gitlab.com/original-user/mon-projet.git`
-- Fork du projet : `https://gitlab.com/votre-utilisateur/mon-projet.git`
+
+**Accéder au dépôt GitLab** que vous souhaitez forker.
+
+**Cliquer sur "Fork"** (bouton en haut à droite).
+
+**Sélectionner l’espace personnel ou un groupe** où créer le Fork.
+
+
+**Le Fork est maintenant disponible dans votre propre espace GitLab.**
+
+**Exemple d'URL avant/après Fork** :
+
+Projet original : `https://gitlab.com/original-user/mon-projet.git`
+
+=== ...
+
+Fork du projet : `https://gitlab.com/votre-utilisateur/mon-projet.git`
+
+=== ...
 
 Une fois le Fork créé, vous pouvez **cloner le dépôt localement** :
 ```bash
@@ -64,7 +87,14 @@ git push origin nouvelle-fonctionnalité
 
 * Aller dans le dépôt de votre Fork sur GitLab.
 * Cliquer sur Merge Requests > New Merge Request.
+
+=== ...
+
 * Sélectionner votre branche comme source et le dépôt original comme destination.
+
+=== ...
+
+
 * Ajouter un titre et une description expliquant vos changements.
 * Cliquer sur Create Merge Request.
 
@@ -101,6 +131,10 @@ Si des conflits existent, GitLab demande leur résolution avant d'autoriser le m
 
 * Accéder à la Merge Request sur GitLab.
 * Vérifier les commentaires et suggestions.
+
+=== ...
+
+
 * Corriger si nécessaire (git commit --amend ou git rebase).
 * Appuyer sur Merge.
 

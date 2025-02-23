@@ -1,4 +1,9 @@
 = Déploiement d'une application sur Heroku via Git
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
 
 Heroku permet de déployer des applications en utilisant Git. Voici les étapes détaillées pour effectuer un déploiement.
 

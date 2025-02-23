@@ -1,4 +1,9 @@
 = Automatisation du déploiement avec GitLab CI/CD et Heroku
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
+== Introduction
 
 Heroku peut être intégré avec GitLab CI/CD afin d'automatiser le déploiement des applications à chaque mise à jour du code. Cette automatisation permet une mise en production fluide et efficace.
 

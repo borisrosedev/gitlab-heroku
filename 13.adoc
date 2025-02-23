@@ -2,11 +2,20 @@
 
 == Introduction
 
-GitLab est une plateforme complète de gestion de code source et de DevOps qui intègre de nombreuses fonctionnalités pour faciliter la collaboration, le suivi des projets et l'automatisation des processus CI/CD.
+GitLab est une plateforme complète de gestion de code source et ...
+
+=== ...
+
+de DevOps qui intègre de nombreuses fonctionnalités pour faciliter la collaboration, le suivi des projets et l'automatisation des processus CI/CD.
 
 == 1. Introduction à GitLab
 
-GitLab est une alternative à GitHub et Bitbucket, permettant non seulement l'hébergement de code Git, mais aussi l'intégration continue (CI/CD), la gestion des tickets, la documentation via le Wiki et bien plus encore.
+GitLab est une alternative à GitHub et Bitbucket, permettant non seulement l'hébergement de code Git, ...
+
+
+=== ...
+
+mais aussi l'intégration continue (CI/CD), la gestion des tickets, la documentation via le Wiki et bien plus encore.
 
 
 === ...
@@ -21,58 +30,126 @@ Les fonctionnalités principales de GitLab incluent :
 Les *Issues* dans GitLab permettent de gérer les tâches, suivre les bugs et organiser le travail en équipe.
 
 === Principales fonctionnalités des Issues :
+
 - Création et assignation des tâches à un utilisateur.
 - Utilisation des **étiquettes (labels)** pour organiser les tickets.
+
+
+=== ...
+
 - Ajout de **commentaires** et **mentions (@)** pour la collaboration.
 - Association des Issues aux *Merge Requests* pour suivre l’évolution du code.
+
+=== ...
+
 - Support des **tableaux de bord Kanban** avec les *Issue Boards*.
 
 === Exemple d’utilisation :
+
 Un développeur crée une *Issue* pour signaler un bug, l’assigne à un collègue, qui peut alors modifier le code et lier son *Merge Request* à l’Issue.
 
 == 3. Wiki : Documentation intégrée du projet
+
 GitLab propose un **Wiki** pour documenter les projets et faciliter la collaboration.
 
 === Fonctionnalités du Wiki :
+
 - Permet de créer plusieurs pages avec du contenu structuré.
+
+=== ...
+
 - Supporte le **Markdown**, **AsciiDoc** et **reStructuredText**.
+
+=== ...
+
 - Versionnage des modifications pour suivre l'évolution de la documentation.
+
+=== ...
+
 - Accessible directement depuis l'interface GitLab.
+
+=== ...
+
 - Peut être utilisé pour documenter l’architecture, les guides de déploiement, etc.
 
 === Exemple d’utilisation :
+
 Un projet open-source utilise le **Wiki** pour documenter son API et fournir des instructions d’installation aux nouveaux contributeurs.
 
 == 4. Merge Requests : Collaboration et revue de code
+
+
 Les *Merge Requests* (MR) permettent de proposer, examiner et fusionner des modifications de code avant qu’elles ne soient intégrées dans la branche principale.
 
 === Fonctionnalités des Merge Requests :
+
+
 - Permet de comparer les modifications entre deux branches.
+
+=== ...
+
 - Inclut une **interface de revue de code** avec des commentaires ligne par ligne.
+
+=== ...
+
 - Intègre la **vérification automatique du code** avec CI/CD.
+
+=== ...
+
 - Supporte l’approbation par plusieurs relecteurs.
+
+=== ...
+
 - Historique et discussion intégrée pour chaque MR.
 
 === Exemple d’utilisation :
+
 Un développeur travaille sur une nouvelle fonctionnalité dans une branche et soumet une *Merge Request* pour qu'un collègue la valide avant intégration dans `main`.
 
 == 5. CI/CD : Automatisation des tests et déploiements
+
+
 GitLab intègre un puissant système **CI/CD** (*Continuous Integration / Continuous Deployment*) pour automatiser le cycle de développement.
 
 === Fonctionnalités du CI/CD :
+
+
 - **GitLab CI/CD Pipelines** : Automatisation des tests, builds et déploiements.
+
+=== ...
+
 - **Fichier `.gitlab-ci.yml`** : Définit les étapes de compilation et de test.
+
+=== ...
+
 - **Runners GitLab** : Exécute les pipelines sur des machines locales ou cloud.
+
+=== ...
+
 - **Déploiements continus** : Intégration avec Docker, Kubernetes et Heroku.
+
+=== ...
+
 - **Monitoring et logs** : Suivi des builds et analyse des échecs.
 
 === Exemple d’utilisation :
-Un pipeline CI/CD est configuré pour tester automatiquement le code à chaque *Merge Request* et déployer l’application en production après validation.
+
+
+Un pipeline CI/CD est configuré pour tester automatiquement le code à chaque *Merge Request* 
+
+=== ...
+
+et déployer l’application en production après validation.
 
 == 6. Conclusion
-GitLab est une plateforme DevOps complète qui offre bien plus que la simple gestion de code source. Grâce aux **Issues, Wiki, Merge Requests et CI/CD**, GitLab permet de gérer un projet du développement au déploiement de manière efficace et automatisée.
 
-=== 📎 Ressources :
-- [Documentation officielle de GitLab](https://docs.gitlab.com/)
-- [Créer un pipeline CI/CD](https://docs.gitlab.com/ee/ci/)
+GitLab est une plateforme DevOps complète qui offre bien plus que la simple gestion de code source. 
+
+=== ...
+
+Grâce aux **Issues, Wiki, Merge Requests et CI/CD**, ...
+
+=== ...
+
+GitLab permet de gérer un projet du développement au déploiement de manière efficace et automatisée.
 

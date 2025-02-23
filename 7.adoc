@@ -1,6 +1,15 @@
 = Suivi des modifications avec `git status` et `git diff`
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
 
-Lorsque vous travaillez sur un projet Git, il est crucial de suivre les modifications effectuées sur vos fichiers avant de les valider (`commit`). Git propose plusieurs commandes pour vérifier l'état des fichiers dans le dépôt, notamment `git status` et `git diff`.
+== Introduction
+
+Lorsque vous travaillez sur un projet Git, il est crucial de suivre les modifications effectuées sur vos fichiers avant de les valider (`commit`). 
+
+=== ...
+
+Git propose plusieurs commandes pour vérifier l'état des fichiers dans le dépôt, notamment `git status` et `git diff`.
 
 == 1️⃣ `git status` – Vérifier l'état des fichiers
 
@@ -124,9 +133,13 @@ git status  # Vérifier qu'il n'y a plus de modifications en attente
 
 == 🎯 Conclusion
 
-✔ `git status` : Montre l’état des fichiers dans le dépôt (modifiés, stagés, non suivis).
-✔ `git diff` : Affiche les différences avant `git add`, et `git diff --staged` montre les différences avant `git commit`.
-✔ Ces commandes sont essentielles pour éviter les erreurs et suivre les modifications avec précision. 🚀
+`git status` : Montre l’état des fichiers dans le dépôt (modifiés, stagés, non suivis).
 
-💬 **Besoin d’un exemple plus approfondi ou d’un cas d’usage spécifique ? 😊**
+=== ...
+`git diff` : Affiche les différences avant `git add`, et `git diff --staged` montre les différences avant `git commit`. 
+
+=== ...
+
+Ces commandes sont essentielles pour éviter les erreurs et suivre les modifications avec précision. 
+
 

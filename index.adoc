@@ -1,4 +1,7 @@
 = GitLab, Git et Heroku
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
 
 == Objectifs du cours :
 

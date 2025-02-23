@@ -1,8 +1,19 @@
 = Historique et Importance du Versionnement
+:revealjs_theme: beige
+:source-highlighter: highlight.js
+:icons: font
 
 == Introduction au Versionnement
 
-Le versionnement est une pratique essentielle en développement logiciel qui permet de suivre et de gérer les modifications du code source. Grâce aux systèmes de gestion de versions (VCS - Version Control Systems), les développeurs peuvent collaborer efficacement, revenir à des versions antérieures et éviter les conflits de code.
+Le versionnement est une pratique essentielle en développement logiciel qui permet de suivre et de gérer les modifications du code source. 
+
+=== ...
+
+Grâce aux systèmes de gestion de versions (VCS - Version Control Systems), ....
+
+=== ...
+
+les développeurs peuvent collaborer efficacement, revenir à des versions antérieures et éviter les conflits de code.
 
 == Historique du Versionnement
 
@@ -17,13 +28,25 @@ Les outils de gestion de versions ont évolué au fil du temps pour répondre au
 === Années 2000 : Apparition des VCS décentralisés
 
 * Subversion (SVN) - 2000 : Développé pour améliorer CVS, il offrait un meilleur contrôle et gestion des commits.
+
+=== ...
+
 * Git - 2005 : Créé par Linus Torvalds pour le développement du noyau Linux, Git devient rapidement un standard de facto.
+
+=== ...
+
 * Mercurial - 2005 : Conçu comme alternative à Git, il met l'accent sur la simplicité et la performance.
 
 === Années 2010-2020 : Explosion des plateformes cloud
 
 * GitHub (2008) : Première plateforme grand public basée sur Git, facilitant la collaboration en ligne.
+
+=== ...
+
 * Bitbucket (2010) et GitLab (2011) : Alternatives à GitHub, offrant des fonctionnalités avancées comme l’intégration continue et la gestion des pipelines CI/CD.
+
+=== ...
+
 * GitHub Actions (2019) : Intégration native des workflows d'automatisation dans GitHub.
 
 == Pourquoi le Versionnement est-il Essentiel ?
@@ -33,6 +56,9 @@ Le versionnement apporte plusieurs avantages majeurs dans le développement logi
 === Suivi des modifications
 
 * Chaque modification est enregistrée avec un message de commit, permettant de savoir qui a changé quoi et pourquoi.
+
+=== ...
+
 * Possibilité de revenir à une version antérieure en cas de problème.
 
 === Travail en équipe efficace
@@ -43,16 +69,26 @@ Le versionnement apporte plusieurs avantages majeurs dans le développement logi
 === Prévention des erreurs et des conflits
 
 * Système de rollback : En cas de bug, on peut revenir à une version stable précédente.
+
+=== ...
+
 * Gestion des conflits : Si deux développeurs modifient le même fichier, Git avertit et permet de résoudre les conflits.
 
 === Automatisation et intégration continue (CI/CD)
 
 * Intégration avec GitLab CI/CD, GitHub Actions ou Jenkins pour automatiser les tests et les déploiements.
+
+=== ...
+
+
 * Gain de temps et fiabilité accrue.
 
 === Sécurisation et traçabilité
 
 * Stockage des versions sur un dépôt distant (GitHub, GitLab, Bitbucket) pour éviter la perte de code.
+
+=== ...
+
 * Historique des contributions pour suivre l’évolution du projet et identifier les auteurs des changements.
 
 == Exemples d'Utilisation du Versionnement
@@ -71,7 +107,9 @@ Le versionnement apporte plusieurs avantages majeurs dans le développement logi
 
 == Conclusion
 
-Le versionnement est indispensable en développement logiciel moderne. Il permet :
+Le versionnement est indispensable en développement logiciel moderne. 
+
+=== Il permet :
 
 * Une meilleure collaboration.
 * Un suivi précis des modifications.

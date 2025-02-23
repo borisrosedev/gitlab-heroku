@@ -1,4 +1,10 @@
-== Différences entre Git et les autres systèmes de versionnement (SVN, Mercurial)
+= Différences entre Git et les autres systèmes de versionnement (SVN, Mercurial)
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
+
+== Introduction
 
 Les systèmes de gestion de versions (VCS – Version Control Systems) permettent de suivre les modifications du code, collaborer efficacement et éviter les conflits dans les projets de développement. 
 

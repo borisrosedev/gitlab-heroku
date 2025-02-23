@@ -1,33 +1,57 @@
 = Création d'un compte et d’un projet GitLab
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
 
 == 1. Introduction
 
-GitLab est une plateforme de gestion de code source et d'intégration continue (CI/CD) permettant de gérer des projets Git. Pour commencer à utiliser GitLab, il est nécessaire de créer un **compte** et un **projet**.
+GitLab est une plateforme de gestion de code source et d'intégration continue (CI/CD) permettant de gérer des projets Git. 
+
+=== ...
+
+Pour commencer à utiliser GitLab, il est nécessaire de créer un **compte** et un **projet**.
 
 
 
 == 2. Création d'un compte GitLab
+
 Avant de créer un projet, il faut disposer d’un compte GitLab.
 
 === Étapes pour s'inscrire :
-1. **Accéder au site GitLab** :  
-   Ouvrir un navigateur et aller sur [https://gitlab.com](https://gitlab.com).
-2. **Créer un compte** :  
+
+
+
+**Accéder au site GitLab** :  
+
+Ouvrir un navigateur et aller sur [https://gitlab.com](https://gitlab.com).
+
+
+
+**Créer un compte** :  
    - Cliquer sur **Sign up** (*S'inscrire*).
    - Renseigner les informations demandées :
      - **Nom d'utilisateur** (ex. `mon_nom`).
      - **Adresse e-mail** (ex. `email@example.com`).
      - **Mot de passe** (choisir un mot de passe sécurisé).
    - Accepter les conditions et cliquer sur **Register**.
-3. **Validation de l’e-mail** :  
+
+=== ...
+
+**Validation de l’e-mail** :  
    - Un e-mail de confirmation est envoyé.
    - Cliquer sur le lien pour activer le compte.
-4. **Connexion** :  
+
+=== ...
+
+**Connexion** :  
    - Aller sur [https://gitlab.com](https://gitlab.com).
    - Entrer son **nom d’utilisateur ou e-mail** et **mot de passe**.
    - Cliquer sur **Sign in** (*Connexion*).
 
 == 3. Création d'un projet GitLab
+
+
 Un **projet GitLab** permet d’héberger le code source, suivre les tâches (*Issues*) et utiliser des pipelines CI/CD.
 
 === Étapes pour créer un projet :
@@ -41,19 +65,41 @@ Un **projet GitLab** permet d’héberger le code source, suivre les tâches (*I
 === ...
 
 **Choisir un type de projet** :
-   - **Create from scratch** (*Créer à partir de zéro*) pour un projet vide.
-   - **Import project** (*Importer un projet*) depuis GitHub, Bitbucket, etc.
-   - **Create from template** (*Créer à partir d’un modèle*) pour utiliser un modèle existant.
+   
+   
+   
+**Create from scratch** (*Créer à partir de zéro*) pour un projet vide.
+   
+=== ...
+   
+**Import project** (*Importer un projet*) depuis GitHub, Bitbucket, etc.
+
+
+=== ...
+
+**Create from template** (*Créer à partir d’un modèle*) pour utiliser un modèle existant.
 
 === ...
 
 **Renseigner les détails du projet** :
-   - **Nom du projet** (ex. `mon-projet`).
-   - **Description** *(optionnelle)*.
-   - **Visibilité** :
-     - `Private` (privé, seulement accessible à vous).
-     - `Internal` (accessible aux membres du groupe GitLab).
-     - `Public` (accessible à tout le monde).
+
+=== ...
+
+**Nom du projet** (ex. `mon-projet`).
+
+
+=== ...
+
+
+
+**Description** *(optionnelle)*.
+
+=== ...
+
+**Visibilité** :
+     `Private` (privé, seulement accessible à vous).
+     `Internal` (accessible aux membres du groupe GitLab).
+     `Public` (accessible à tout le monde).
 
 === ...
 
@@ -62,6 +108,8 @@ Un **projet GitLab** permet d’héberger le code source, suivre les tâches (*I
 === ✅ Le projet est maintenant créé ! 🚀
 
 == 4. Cloner le projet GitLab en local
+
+
 Après avoir créé un projet, il est possible de **le cloner sur son ordinateur** pour travailler dessus.
 
 === Étapes pour cloner un projet :

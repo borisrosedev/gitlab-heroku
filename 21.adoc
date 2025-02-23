@@ -1,16 +1,34 @@
 = Introduction aux pipelines CI/CD avec GitLab
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
+
 
 == Qu'est-ce que le CI/CD ?
+
+
 Le CI/CD (Intégration Continue et Déploiement Continu) est un ensemble de pratiques qui automatisent le développement, le test et le déploiement des applications.
 
-* **Intégration Continue (CI)** : Automatisation du processus de test et de validation du code.
-* **Déploiement Continu (CD)** : Automatisation du déploiement des applications en production ou en pré-production.
+**Intégration Continue (CI)** : 
+
+Automatisation du processus de test et de validation du code.
+
+
+**Déploiement Continu (CD)** : 
+
+
+Automatisation du déploiement des applications en production ou en pré-production.
+
+
+=== ...
 
 GitLab CI/CD permet d'automatiser ces processus grâce aux fichiers `.gitlab-ci.yml`.
 
 == Configuration de GitLab CI/CD
 
 === 1. Création du fichier `.gitlab-ci.yml`
+
+
 Le fichier `.gitlab-ci.yml` est placé à la racine du dépôt Git et définit les étapes du pipeline.
 
 .Exemple simple de `.gitlab-ci.yml`
@@ -38,10 +56,17 @@ deploy-job:
 ----
 
 === 2. Exécution des jobs
+
 Chaque job s'exécute dans un environnement isolé appelé un *runner*. GitLab propose des runners partagés ou permet d'installer ses propres runners.
 
 == Utilisation des runners
-GitLab Runner est un agent qui exécute les tâches définies dans le pipeline. Il peut être configuré sur des machines locales ou des serveurs distants.
+
+
+GitLab Runner est un agent qui exécute les tâches définies dans le pipeline. 
+
+=== ...
+
+Il peut être configuré sur des machines locales ou des serveurs distants.
 
 .Commandes pour installer un GitLab Runner sur Linux
 [source,bash]
@@ -57,10 +82,19 @@ sudo gitlab-runner register
 ----
 
 == Bonnes pratiques CI/CD avec GitLab
+
 * **Utiliser des images Docker adaptées** pour chaque étape.
 * **Définir des caches** pour optimiser les performances.
+
+=== ...
+
 * **Utiliser des variables d'environnement** pour la sécurité.
 * **Déclencher les déploiements manuellement** en cas de besoin avec des `manual jobs`.
 
 == Conclusion
-GitLab CI/CD permet d'automatiser et de fiabiliser les processus de développement. Grâce aux pipelines bien définis, les équipes peuvent livrer du code plus rapidement et de manière plus fiable.
+
+GitLab CI/CD permet d'automatiser et de fiabiliser les processus de développement. 
+
+=== ...
+
+Grâce aux pipelines bien définis, les équipes peuvent livrer du code plus rapidement et de manière plus fiable.

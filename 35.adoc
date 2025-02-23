@@ -1,6 +1,15 @@
 = Connexion entre GitLab et Heroku via Pipelines
+:revealjs_theme: black
+:source-highlighter: highlight.js
+:icons: font
 
-L'intégration entre GitLab et Heroku permet d'automatiser le déploiement d'une application via des pipelines CI/CD. Cette connexion simplifie la mise en production en exécutant automatiquement le déploiement après chaque commit.
+== Introduction
+
+L'intégration entre GitLab et Heroku permet d'automatiser le déploiement d'une application via des pipelines CI/CD. 
+
+=== ...
+
+Cette connexion simplifie la mise en production en exécutant automatiquement le déploiement après chaque commit.
 
 == Prérequis
 
@@ -27,7 +36,8 @@ DATABASE_URL : URL de la base PostgreSQL si utilisée.
 === 2. Création du fichier .gitlab-ci.yml
 
 Ajoutez le fichier .gitlab-ci.yml à la racine de votre projet :
-
+[source, yaml]
+----
 stages:
   - deploy
 
@@ -43,7 +53,7 @@ deploy_to_heroku:
     - git push heroku main
   only:
     - main
-
+----
 === 3. Vérification et suivi du pipeline
 
 Commit et push de votre code sur la branche main.
@@ -56,5 +66,9 @@ heroku open
 
 == Conclusion
 
-L’intégration entre GitLab et Heroku permet d’automatiser le déploiement et de garantir une mise en production fluide après chaque modification du code. Cette connexion est essentielle pour une gestion efficace des applications en continu.
+L’intégration entre GitLab et Heroku permet d’automatiser le déploiement et de garantir une mise en production fluide après chaque modification du code. 
+
+=== ...
+
+Cette connexion est essentielle pour une gestion efficace des applications en continu.
 
