@@ -1,0 +1,95 @@
+= GitLab, Git et Heroku
+
+== Objectifs du cours :
+
+* Comprendre les concepts fondamentaux de Git et GitLab.
+* Maîtriser le workflow Git (commit, branches, merge, rebase).
+
+=== ...
+
+* Utiliser GitLab CI/CD pour automatiser les déploiements.
+* Déployer une application sur Heroku en utilisant Git et GitLab.
+
+== Module 1 : Introduction à Git 
+
+
+=== 1.1 Qu'est-ce que Git ?
+
+* link:./1.html[Historique et importance du versionnement.]
+* link:./2.html[Différences entre Git et les autres systèmes de versionnement (SVN, Mercurial).]
+
+===  1.2 Installation et Configuration de Git
+
+* Installation sur Windows, Mac, Linux.
+
+* link:./4.html[Configuration (git config --global user.name, git config --global user.email).]
+
+=== 1.3 Les bases de Git
+
+* Création d'un dépôt Git (git init).
+* Ajout et commit (git add, git commit -m).
+* link:./7.html[Suivi des modifications (git status, git diff).]
+* Affichage de l'historique (git log).
+
+=== 1.4 Travail avec des branches
+
+* Création et changement de branche (git branch, git checkout).
+* Fusion de branches (git merge).
+* link:./11.html[Résolution de conflits.]
+
+== Module 2 : GitLab – Collaboration et CI/CD
+
+=== 2.1 Introduction à GitLab
+
+* link:./12.html[Différence entre GitHub, GitLab, et Bitbucket.]
+* link:./13.html[Présentation des fonctionnalités de GitLab : Issues, Wiki, * Merge Requests, CI/CD.]
+* link:./14.html[Création d'un compte et d’un projet GitLab.]
+
+=== 2.2 Utilisation avancée de GitLab
+
+* Clonage d'un dépôt GitLab (git clone).
+* Pousser des modifications (git push, git pull).
+* link:./17.html[Fork et Merge Requests.]
+
+=== 2.3 Gestion avancée des branches
+
+* link:./18.html[Stratégies de branching (Git Flow, GitHub Flow).]
+* link:./19.html[Rebase (git rebase) et cherry-pick (git cherry-pick)].
+* link:./20.html[Tags et versions (git tag, git checkout tags)].
+
+=== 2.4 Mise en place d’un pipeline CI/CD avec GitLab
+
+* link:./21.html[Introduction aux pipelines CI/CD.]
+* link:./22.html[Création d’un fichier .gitlab-ci.yml.]
+* link:./23.html[Définition des jobs et des runners.]
+* link:./24.html[Automatisation des tests et des déploiements.]
+
+== Module 3 : Déploiement avec Heroku
+
+=== 3.1 Introduction à Heroku
+
+* link:./25.html[Présentation de Heroku et de son fonctionnement.]
+* link:./26.html[Comparaison avec d’autres PaaS (AWS Elastic Beanstalk, Netlify, Vercel).]
+
+=== 3.2 Déploiement d'une application sur Heroku
+
+* link:./27.html[Installation et configuration de l'Heroku CLI.]
+* link:./28.html[Création d'une application sur Heroku.]
+* link:./29.html[Déploiement via Git (git push heroku main).]
+
+=== 3.3 Déploiement via GitLab CI/CD
+
+* link:./30.html[Intégration de Heroku avec GitLab CI/CD.]
+* link:./31.html[Ajout de variables d’environnement (HEROKU_API_KEY).]
+* link:./32.html[Automatisation du déploiement.]
+
+=== 3.4 Gestion des bases de données sur Heroku
+
+* link:./33.html[Ajout d’une base de données PostgreSQL.]
+* link:./34.html[Migration et gestion des données (heroku run rails db:migrate).]
+* link:./35.html[Connexion entre GitLab et Heroku via pipelines.]
+* link:./36.html[Surveillance et gestion du déploiement (logs, dynos, add-ons).]
+
+
+
+

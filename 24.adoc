@@ -1,0 +1,43 @@
+= Automatisation des tests et des déploiements
+
+L'automatisation des tests et des déploiements est un élément clé du CI/CD. Grâce à GitLab CI/CD, les tests sont exécutés automatiquement à chaque modification du code, et les déploiements peuvent être déclenchés automatiquement ou manuellement selon les besoins.
+
+=== Automatisation des tests
+
+Les tests permettent de s'assurer que le code fonctionne correctement avant d'être déployé. Un job de test typique peut inclure des tests unitaires, des tests d'intégration et des tests fonctionnels.
+
+.Exemple de configuration de tests dans .gitlab-ci.yml
+[source,yaml]
+
+stages:
+
+test
+
+test-job:
+stage: test
+script:
+- echo "Exécution des tests..."
+- pytest tests/
+
+=== Automatisation des déploiements
+
+Le déploiement peut être déclenché automatiquement après la validation des tests ou nécessiter une validation manuelle.
+
+.Exemple de configuration de déploiement dans .gitlab-ci.yml
+[source,yaml]
+
+stages:
+
+deploy
+
+deploy-job:
+stage: deploy
+script:
+- echo "Déploiement en cours..."
+- ./deploy.sh
+when: manual
+
+Avec cette configuration, le déploiement doit être déclenché manuellement via l'interface GitLab.
+
+L'automatisation des tests et des déploiements réduit les erreurs humaines, améliore la qualité du code et accélère la livraison des nouvelles fonctionnalités.
+

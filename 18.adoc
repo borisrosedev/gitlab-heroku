@@ -1,0 +1,241 @@
+= Stratégies de Branching : Git Flow et GitHub Flow
+
+== 1. Introduction
+
+Dans un projet de développement logiciel utilisant Git, il est essentiel de définir une stratégie de branching pour assurer une collaboration efficace et éviter les conflits. 
+
+=== ...
+
+Deux des stratégies les plus populaires sont Git Flow et GitHub Flow.
+
+
+=== Ce document explique :
+
+* Le fonctionnement de Git Flow.
+
+* Le fonctionnement de GitHub Flow.
+
+* Leurs différences et cas d'utilisation.
+
+== 2. Git Flow : Une stratégie avancée pour les projets structurés
+
+Git Flow est un modèle de gestion des branches introduit par Vincent Driessen. 
+
+=== ...
+
+Il est idéal pour des projets ayant des cycles de développement bien définis (ex : logiciels versionnés, applications complexes).
+
+=== 📌 Principes de Git Flow
+
+Git Flow repose sur plusieurs branches principales et temporaires :
+
+
+=== main : 
+
+Contient uniquement du code stable et versionné.
+
+=== develop : 
+
+Intègre les nouvelles fonctionnalités avant d'être fusionné dans main.
+
+
+=== feature/* : 
+
+Branches utilisées pour développer de nouvelles fonctionnalités.
+
+
+=== release/* : 
+
+Prépare une nouvelle version avant fusion dans main.
+
+=== hotfix/* : 
+
+
+Corrige rapidement des bugs critiques en production.
+
+=== 🔹 Workflow Git Flow
+
+Créer une nouvelle fonctionnalité :
+
+git checkout -b feature/nouvelle-fonction develop
+
+
+=== Développer et fusionner dans develop :
+
+* git checkout develop
+* git merge feature/nouvelle-fonction
+* git branch -d feature/nouvelle-fonction
+
+
+=== Créer une branche de release :
+
+git checkout -b release/1.0 develop
+
+
+=== Fusionner la version stable dans main et develop :
+
+* git checkout main
+* git merge release/1.0
+* git checkout develop
+* git merge release/1.0
+* git branch -d release/1.0
+
+
+=== Corriger un bug en production (hotfix) :
+
+* git checkout -b hotfix/bug-fix main
+* git commit -am "Correction d'un bug critique"
+* git checkout main
+* git merge hotfix/bug-fix
+* git checkout develop
+* git merge hotfix/bug-fix
+* git branch -d hotfix/bug-fix
+
+===  Avantages de Git Flow
+
+* Adapté aux projets complexes avec des cycles de version bien définis.
+
+=== ...
+
+* Séparation claire entre développement, stabilisation et production.
+
+=== ...
+
+* Facilite la gestion des corrections urgentes via hotfix.
+
+===  Inconvénients
+
+Peut être trop lourd pour les projets rapides ou les petites équipes.
+
+=== ...
+
+Nécessite une bonne compréhension et discipline des développeurs.
+
+== 3. GitHub Flow : 
+
+Une stratégie simplifiée pour le développement agile
+
+=== ...
+
+GitHub Flow est une stratégie plus simple et flexible, idéale pour les projets agiles et ...
+
+=== ...
+
+les déploiements continus (ex : applications web, startups, microservices).
+
+=== 📌 Principes de GitHub Flow
+
+Contrairement à Git Flow, GitHub Flow ne possède que deux types de branches :
+
+=== main : 
+
+Contient toujours du code prêt pour la production.
+
+
+=== feature/* : 
+
+Utilisée pour ajouter des fonctionnalités ou corriger des bugs.
+
+=== 🔹 Workflow GitHub Flow
+
+
+=== ...
+
+Créer une nouvelle branche à partir de main :
+
+git checkout -b feature/nouvelle-fonction main
+
+=== ...
+
+Développer la fonctionnalité et committer :
+
+git commit -am "Ajout d'une nouvelle fonctionnalité"
+
+=== ...
+
+Pousser la branche sur le dépôt distant :
+
+git push origin feature/nouvelle-fonction
+
+=== ...
+
+Ouvrir une Pull Request sur GitHub et demander une revue.
+
+=== ...
+
+Une fois validée, fusionner la branche dans main :
+
+=== ...
+
+* git checkout main
+* git merge feature/nouvelle-fonction
+* git push origin main
+
+
+=== ...
+Supprimer la branche après fusion :
+
+[source, bash]
+----
+git branch -d feature/nouvelle-fonction
+----
+
+
+===  Avantages de GitHub Flow
+
+* Simplicité et rapidité d'exécution.
+
+=== ...
+
+* Idéal pour le développement agile et les déploiements fréquents.
+
+=== ...
+
+* Facilité de contribution pour les équipes distribuées.
+
+===  Inconvénients
+
+* Peut manquer de contrôle sur les versions stables (pas de release/*).
+
+=== ...
+
+* Moins adapté aux grands projets nécessitant une gestion avancée.
+
+== 4. Comparaison Git Flow vs GitHub Flow
+
+[cols="1,3,3", options="header"]
+|===
+| Critère | Git Flow | GitHub Flow
+
+| Complexité | Élevée (multi-branches) | Faible (2 types de branches)
+|===
+
+=== ...
+
+[cols="1,3,3"]
+|===
+| Utilisation | Projets complexes, logiciels avec versions | Projets web, startups, CI/CD
+| Déploiements | Versionnés, stabilisés avant publication | Déploiements fréquents, immédiats
+|===
+
+=== ...
+
+[cols="1,3,3"]
+|===
+| Hotfixes | Branches dédiées (hotfix/*) | Correction directement sur main
+| Outil recommandé | GitLab, Bitbucket | GitHub, GitLab CI/CD
+|===
+
+== 5. Conclusion
+
+Git Flow est idéal pour les projets nécessitant des versions stables et une gestion avancée des branches.
+
+=== ...
+
+GitHub Flow convient aux projets en développement rapide, favorisant l'intégration continue et le déploiement fréquent.
+
+=== ...
+
+* Le choix dépend du type de projet et de la stratégie de développement de l'équipe !
+
+

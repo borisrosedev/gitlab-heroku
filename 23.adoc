@@ -1,0 +1,62 @@
+== Définition des jobs et des runners
+
+Jobs
+
+Un job représente une unité de travail exécutée dans un pipeline CI/CD. Chaque job est défini dans le fichier .gitlab-ci.yml et peut appartenir à une étape (stage) spécifique.
+
+Exemple de définition de jobs :
+
+[source,yaml]
+
+stages:
+
+build
+
+test
+
+deploy
+
+build-job:
+stage: build
+script:
+- echo "Compilation en cours..."
+
+test-job:
+stage: test
+script:
+- echo "Exécution des tests..."
+
+deploy-job:
+stage: deploy
+script:
+- echo "Déploiement en cours..."
+
+Runners
+
+Un runner est un agent exécutant les jobs définis dans le fichier .gitlab-ci.yml. Il peut être :
+
+Shared Runner : Partagé entre plusieurs projets GitLab.
+
+Specific Runner : Dédié à un projet particulier.
+
+Group Runner : Disponible pour plusieurs projets dans un même groupe GitLab.
+
+Installation et configuration d’un runner sur Linux
+
+[source,bash]
+
+Ajouter le dépôt officiel
+
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
+
+Installer le runner
+
+sudo apt install gitlab-runner
+
+Enregistrer le runner
+
+sudo gitlab-runner register
+
+Les runners peuvent être configurés pour utiliser différentes executors comme Docker, Shell, Kubernetes, etc.
+
+GitLab CI/CD permet ainsi d'automatiser l'exécution des tests, la compilation et le déploiement en s'appuyant sur ces jobs et runners.

@@ -1,0 +1,68 @@
+= GitLab CI/CD
+
+GitLab CI/CD permet d'automatiser ces processus grâce aux fichiers .gitlab-ci.yml.
+
+== Création d’un fichier .gitlab-ci.yml
+Le fichier .gitlab-ci.yml est utilisé pour définir les étapes et les jobs du pipeline GitLab CI/CD. Il est placé à la racine du dépôt Git et suit la syntaxe YAML.
+
+=== Exemple de .gitlab-ci.yml
+
+[source,yaml]
+
+stages:
+
+build
+
+test
+
+deploy
+
+build-job:
+stage: build
+script:
+- echo "Compilation en cours..."
+
+test-job:
+stage: test
+script:
+- echo "Exécution des tests..."
+
+deploy-job:
+stage: deploy
+script:
+- echo "Déploiement en cours..."
+
+== Exécution des jobs
+Chaque job s'exécute dans un environnement isolé appelé un runner. GitLab propose des runners partagés ou permet d'installer ses propres runners.
+
+== Utilisation des runners
+GitLab Runner est un agent qui exécute les tâches définies dans le pipeline. Il peut être configuré sur des machines locales ou des serveurs distants.
+
+.Commandes pour installer un GitLab Runner sur Linux
+[source,bash]
+
+Ajouter le dépôt officiel
+
+curl -L https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh | sudo bash
+
+Installer le runner
+
+sudo apt install gitlab-runner
+
+Enregistrer le runner
+
+sudo gitlab-runner register
+
+== Bonnes pratiques CI/CD avec GitLab
+
+Utiliser des images Docker adaptées pour chaque étape.
+
+Définir des caches pour optimiser les performances.
+
+Utiliser des variables d'environnement pour la sécurité.
+
+Déclencher les déploiements manuellement en cas de besoin avec des manual jobs.
+
+== Conclusion
+GitLab CI/CD permet d'automatiser et de fiabiliser les processus de développement. Grâce aux pipelines bien définis, les équipes peuvent livrer du code plus rapidement et de manière plus fiable.
+

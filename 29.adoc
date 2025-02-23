@@ -1,0 +1,93 @@
+= Déploiement d'une application sur Heroku via Git
+
+Heroku permet de déployer des applications en utilisant Git. Voici les étapes détaillées pour effectuer un déploiement.
+
+== Prérequis
+
+Un compte Heroku (https://www.heroku.com/).
+
+L'Heroku CLI installé (https://devcenter.heroku.com/articles/heroku-cli).
+
+Git installé sur votre machine.
+
+Une application existante sous gestion Git.
+
+== Étapes de déploiement
+
+=== 1. Se connecter à Heroku
+
+Avant toute opération, assurez-vous d'être connecté :
+
+heroku login
+
+Cette commande ouvre un navigateur pour l'authentification.
+
+=== 2. Initialiser un dépôt Git (si ce n'est pas déjà fait)
+
+mkdir mon-app
+cd mon-app
+git init
+echo "# Mon application Heroku" > README.md
+git add .
+git commit -m "Initial commit"
+
+=== 3. Créer une application Heroku
+
+Si l'application n'est pas encore créée sur Heroku :
+
+heroku create mon-app
+
+Heroku génère un nom unique si aucun nom spécifique n'est fourni.
+
+=== 4. Ajouter le dépôt distant Heroku
+
+git remote add heroku https://git.heroku.com/mon-app.git
+
+=== 5. Déployer l'application avec Git
+
+L'envoi du code vers Heroku se fait avec la commande :
+
+git push heroku main
+
+Si votre branche principale est master, utilisez :
+
+git push heroku master
+
+Heroku exécute automatiquement le processus de build et démarre l'application.
+
+=== 6. Vérifier l'application
+
+Pour ouvrir l'application dans le navigateur :
+
+heroku open
+
+=== 7. Afficher les logs
+
+Pour suivre l'exécution et identifier d'éventuelles erreurs :
+
+heroku logs --tail
+
+== Gestion des configurations et variables d'environnement
+
+Ajout d'une variable d'environnement :
+
+heroku config:set NOM_VARIABLE=valeur
+
+Affichage des variables d'environnement :
+
+heroku config
+
+== Gestion de la base de données PostgreSQL
+
+Ajout d'une base de données PostgreSQL :
+
+heroku addons:create heroku-postgresql:hobby-dev
+
+Récupération de l'URL de connexion :
+
+heroku config | grep DATABASE_URL
+
+== Conclusion
+
+Le déploiement via Git sur Heroku est simple et rapide. Il permet de gérer facilement la mise en production et le suivi de l’application avec quelques commandes.
+

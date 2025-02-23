@@ -1,0 +1,88 @@
+= Intégration de Heroku avec GitLab CI/CD
+
+Heroku peut être intégré avec GitLab CI/CD afin d'automatiser le déploiement des applications à chaque mise à jour du code. Cette intégration permet une gestion efficace des pipelines CI/CD.
+
+== Prérequis
+
+Un compte Heroku et une application créée.
+
+Un projet GitLab sous gestion Git.
+
+L'Heroku CLI installé sur votre environnement local.
+
+Un Heroku API Key (disponible sur le tableau de bord Heroku).
+
+== Configuration de GitLab CI/CD pour Heroku
+
+=== 1. Ajouter la clé API Heroku à GitLab
+
+Accédez à Settings > CI/CD > Variables dans GitLab.
+
+Ajoutez une nouvelle variable :
+
+Key : HEROKU_API_KEY
+
+Value : Clé API obtenue via heroku auth:token
+
+Type : Masquée (Protected)
+
+=== 2. Ajouter d'autres variables d’environnement
+
+Il est possible d’ajouter d’autres variables nécessaires au bon fonctionnement de l’application, comme :
+
+HEROKU_APP_NAME : Nom de l’application Heroku.
+
+DATABASE_URL : URL de la base de données si une base PostgreSQL est utilisée.
+
+SECRET_KEY : Clé secrète pour l’application.
+
+NODE_ENV ou FLASK_ENV : Mode d’exécution (production ou développement).
+
+Ajoutez ces variables dans Settings > CI/CD > Variables de GitLab, en veillant à les masquer pour éviter toute exposition accidentelle.
+
+=== 3. Créer un fichier .gitlab-ci.yml
+
+Ajoutez le fichier suivant à la racine du projet :
+
+stages:
+  - deploy
+
+deploy_to_heroku:
+  stage: deploy
+  image: alpine
+  before_script:
+    - apk add --update git curl
+    - curl https://cli-assets.heroku.com/install.sh | sh
+    - heroku plugins:install heroku-cli-deploy
+  script:
+    - heroku git:remote -a $HEROKU_APP_NAME
+    - git push heroku main
+  only:
+    - main
+
+=== 4. Expliquer le fonctionnement du pipeline
+
+stages : Déclare une étape deploy.
+
+deploy_to_heroku :
+
+Installe les dépendances nécessaires (Git, Curl, Heroku CLI).
+
+Ajoute Heroku en tant que dépôt distant.
+
+Pousse automatiquement le code vers Heroku lorsque des changements sont effectués sur la branche main.
+
+Utilise les variables d’environnement définies pour une configuration dynamique.
+
+== Vérification du déploiement
+
+Après un commit, GitLab exécutera automatiquement le pipeline.
+
+Suivez les logs dans CI/CD > Pipelines pour vérifier le bon déroulement.
+
+Une fois terminé, l'application sera accessible en ligne via heroku open.
+
+== Conclusion
+
+L'intégration de GitLab CI/CD avec Heroku permet un déploiement automatisé et sans erreur, garantissant une mise en production fluide et contrôlée.
+

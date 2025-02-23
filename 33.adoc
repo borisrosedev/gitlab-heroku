@@ -1,0 +1,39 @@
+=== 3. Ajout d’une base de données PostgreSQL
+
+Heroku propose un service de base de données PostgreSQL facile à configurer.
+
+Ajout de PostgreSQL
+
+heroku addons:create heroku-postgresql:hobby-dev --app $HEROKU_APP_NAME
+
+Cette commande ajoute une base PostgreSQL gratuite (hobby-dev).
+
+Récupération de l’URL de connexion
+
+heroku config:get DATABASE_URL --app $HEROKU_APP_NAME
+
+L’URL de connexion peut être utilisée pour configurer votre application.
+
+Accès à la base de données
+
+heroku pg:psql --app $HEROKU_APP_NAME
+
+Ouvre une console interactive pour interagir avec la base de données.
+
+Migration de la base de données (si applicable, pour Django ou Flask par exemple)
+
+heroku run python manage.py migrate --app $HEROKU_APP_NAME
+
+== Vérification du déploiement
+
+Commit et push votre code sur la branche main.
+
+Consultez CI/CD > Pipelines sur GitLab pour suivre l'exécution du pipeline.
+
+Une fois terminé, ouvrez l'application avec :
+
+heroku open
+
+== Conclusion
+
+L'automatisation du déploiement avec GitLab CI/CD et Heroku garantit une mise en production efficace, réduit les erreurs manuelles et facilite la gestion des versions de l'application.

@@ -1,0 +1,50 @@
+== Configuration de Git avec git config
+
+Lorsque vous installez Git, il est nécessaire de le configurer pour pouvoir l'utiliser correctement, notamment en définissant votre identité et certaines options par défaut.
+
+=== Pourquoi configurer Git ?
+
+Avant d'effectuer des commits, Git doit savoir qui vous êtes. Cette information est utilisée pour suivre l'auteur des modifications et s'assurer que chaque commit a une signature identifiable.
+
+💡 Note : Ces paramètres sont obligatoires pour pouvoir commit des modifications dans un dépôt Git.
+
+=== Vérifier la configuration actuelle
+
+git config --list
+
+=== Configurer son identité avec git config
+
+git config --global user.name "Votre Nom"
+git config --global user.email "votre@email.com"
+
+=== Vérifier que la configuration est bien appliquée
+
+git config --global user.name
+git config --global user.email
+
+=== Configurer des paramètres spécifiques à un projet
+
+cd /chemin/vers/mon-projet
+git config user.name "Autre Nom"
+git config user.email "autre.email@example.com"
+
+=== Où est stockée la configuration Git ?
+
+Niveau
+
+Emplacement
+
+Global
+
+~/.gitconfig (Linux/Mac) ou C:\Users\VotreNom\.gitconfig (Windows)
+
+Local
+
+.git/config dans le dossier du projet
+
+=== Supprimer ou modifier une configuration
+
+git config --global user.email "nouveau.email@example.com"
+git config --global --unset user.name
+git config --global --unset user.email
+

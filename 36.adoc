@@ -1,0 +1,66 @@
+= Surveillance et gestion du déploiement sur Heroku
+
+La surveillance et la gestion du déploiement sur Heroku sont essentielles pour garantir le bon fonctionnement de l’application. Heroku propose plusieurs outils intégrés pour suivre les logs, gérer les dynos et superviser les add-ons.
+
+== Suivi des logs
+
+Les logs permettent de surveiller l’activité de l’application et de détecter d’éventuels problèmes.
+
+Affichage des logs en temps réel
+
+heroku logs --tail --app NOM_DE_L_APP
+
+Cette commande affiche les logs en continu.
+
+Filtrage des logs
+
+heroku logs --source app --app NOM_DE_L_APP
+
+Permet d’afficher uniquement les logs de l’application.
+
+Utilisation d’un add-on de gestion des logs
+
+heroku addons:create papertrail --app NOM_DE_L_APP
+
+Papertrail offre une interface avancée pour analyser et stocker les logs.
+
+== Gestion des dynos
+
+Les dynos sont les conteneurs qui exécutent l’application sur Heroku. Leur gestion est cruciale pour assurer la performance et la scalabilité.
+
+Affichage des dynos en cours d’exécution
+
+heroku ps --app NOM_DE_L_APP
+
+Redémarrage des dynos
+
+heroku restart --app NOM_DE_L_APP
+
+Mise à l’échelle des dynos
+
+heroku ps:scale web=2 --app NOM_DE_L_APP
+
+Cette commande augmente le nombre d’instances dyno pour mieux gérer la charge.
+
+== Gestion des add-ons
+
+Heroku propose de nombreux add-ons pour améliorer les performances et ajouter des fonctionnalités.
+
+Liste des add-ons installés
+
+heroku addons --app NOM_DE_L_APP
+
+Ajout d’un nouvel add-on
+
+heroku addons:create heroku-redis:hobby-dev --app NOM_DE_L_APP
+
+Cette commande ajoute Redis à l’application.
+
+Suppression d’un add-on
+
+heroku addons:destroy heroku-redis --app NOM_DE_L_APP
+
+== Conclusion
+
+La surveillance et la gestion du déploiement sur Heroku passent par le suivi des logs, la gestion des dynos et l’utilisation d’add-ons adaptés. Ces outils garantissent un fonctionnement optimal de l’application en production.
+

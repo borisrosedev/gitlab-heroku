@@ -1,0 +1,80 @@
+= Création d'une application sur Heroku
+
+Heroku permet de déployer rapidement des applications via la ligne de commande. Voici les étapes essentielles pour créer et déployer une application sur Heroku.
+
+== Prérequis
+
+Avoir un compte Heroku (https://www.heroku.com/).
+
+Installer l'Heroku CLI (https://devcenter.heroku.com/articles/heroku-cli).
+
+Installer Git.
+
+== Étapes de création d'une application
+
+=== 1. Se connecter à Heroku
+
+heroku login
+
+Cette commande ouvre une page dans le navigateur pour l'authentification.
+
+=== 2. Initialiser un projet Git
+Si vous n'avez pas encore de projet, créez un dossier et initialisez un dépôt Git :
+
+mkdir mon-app
+cd mon-app
+git init
+echo "# Mon application Heroku" > README.md
+git add .
+git commit -m "Initial commit"
+
+=== 3. Créer une application Heroku
+
+heroku create mon-app
+
+Heroku génère un nom unique si aucun nom n'est spécifié.
+
+=== 4. Ajouter un dépôt distant
+
+git remote add heroku https://git.heroku.com/mon-app.git
+
+=== 5. Déployer l'application
+
+git push heroku main
+
+Si la branche principale est master, utilisez git push heroku master.
+
+=== 6. Ouvrir l'application
+
+heroku open
+
+=== 7. Vérifier les logs
+
+heroku logs --tail
+
+Permet de consulter les logs en temps réel.
+
+== Gestion des variables d'environnement
+
+Ajout d'une variable d'environnement :
+
+heroku config:set NOM_VARIABLE=valeur
+
+Affichage des variables d'environnement :
+
+heroku config
+
+== Gestion de la base de données PostgreSQL
+
+Ajout d'une base de données :
+
+heroku addons:create heroku-postgresql:hobby-dev
+
+Récupération de l'URL de connexion :
+
+heroku config | grep DATABASE_URL
+
+== Conclusion
+
+Heroku offre une solution simple pour déployer des applications. Il permet de gérer le déploiement, l'évolutivité et l'intégration avec divers services en quelques commandes.
+

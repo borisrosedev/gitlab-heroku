@@ -1,0 +1,54 @@
+== 4. Concepts avancés : Git Rebase et Git Cherry-Pick
+
+=== 🔹 Git Rebase (git rebase)
+Le rebase permet de réappliquer une série de commits sur une autre branche, souvent utilisé pour garder un historique linéaire.
+
+Exemple : Rebaser feature/nouvelle-fonction sur main :
+
+   git checkout feature/nouvelle-fonction
+   git rebase main
+
+Avantages :
+✔ Historique propre et linéaire.
+✔ Évite les commits de merge inutiles.
+
+Inconvénients :
+❌ Peut entraîner des conflits difficiles à résoudre.
+
+=== 🔹 Git Cherry-Pick (git cherry-pick)
+La commande git cherry-pick permet de sélectionner un commit spécifique d’une branche et de l’appliquer sur une autre.
+
+Exemple : Appliquer un commit spécifique de feature sur main :
+
+   git checkout main
+   git cherry-pick <commit-hash>
+
+Avantages :
+✔ Utile pour récupérer un correctif sans fusionner une branche entière.
+✔ Flexible et précis.
+
+Inconvénients :
+❌ Peut dupliquer l’historique et compliquer la gestion des branches.
+
+== 5. Conclusion
+
+Git Flow est idéal pour les projets nécessitant des versions stables et une gestion avancée des branches.
+
+GitHub Flow convient aux projets en développement rapide, favorisant l'intégration continue et le déploiement fréquent.
+
+Git Rebase aide à garder un historique linéaire mais peut être complexe.
+
+Git Cherry-Pick permet de sélectionner des commits spécifiques sans fusionner une branche entière.
+
+💡 Le choix dépend du type de projet et de la stratégie de développement de l'équipe !
+
+📎 Ressources utiles :
+
+Documentation officielle de Git Flow
+
+GitHub Flow sur GitHub
+
+Documentation Git Rebase
+
+Documentation Git Cherry-Pick
+

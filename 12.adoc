@@ -1,0 +1,133 @@
+= Différences entre GitHub, GitLab et Bitbucket
+
+== 1. Introduction
+GitHub, GitLab et Bitbucket sont trois plateformes majeures de gestion de code source basées sur Git. 
+
+=== ...
+
+Elles permettent l'hébergement de dépôts Git, la gestion de projets collaboratifs et l'intégration continue (CI/CD).
+
+Ce document compare ces plateformes sur plusieurs critères essentiels.
+
+== 2. Comparaison Générale
+
+[cols="1,3,3,3", options="header"]
+|===
+| Critère | GitHub | GitLab | Bitbucket
+|===
+
+=== ...
+
+
+[cols="1,3,3,3"]
+|===
+
+| Hébergement
+| Cloud (GitHub.com) et auto-hébergement via GitHub Enterprise
+| Cloud (GitLab.com) et auto-hébergement gratuit via GitLab CE et GitLab EE
+| Cloud (Bitbucket.org) et auto-hébergement via Bitbucket Server
+|===
+
+=== ...
+
+
+[cols="1,3,3,3"]
+|===
+
+| Modèle de gestion
+| Principalement centralisé autour de GitHub Flow
+| GitLab Flow, plus flexible et adapté aux CI/CD avancés
+| Supporte Git et Mercurial (jusqu'en 2020)
+|===
+
+=== ...
+
+
+[cols="1,3,3,3"]
+|===
+
+| Gestion des pipelines CI/CD
+| Intégré avec **GitHub Actions**
+| Intégré avec **GitLab CI/CD** (natif et puissant)
+| Intégré avec **Bitbucket Pipelines**
+|===
+
+=== ...
+
+
+[cols="1,3,3,3"]
+|===
+
+| Gestion des permissions
+| Granularité limitée sur les branches et équipes
+| Contrôle avancé des permissions et niveaux d'accès
+| Contrôle avancé avec Atlassian Access et intégration avec Jira
+|===
+
+=== ...
+
+
+[cols="1,3,3,3"]
+|===
+
+| Intégration avec d'autres outils
+| Fortement intégré avec GitHub Actions, Copilot et AWS
+| CI/CD natif et support Kubernetes
+| Forte intégration avec Jira, Trello et d'autres outils Atlassian
+|===
+
+=== ...
+
+
+[cols="1,3,3,3"]
+|===
+
+| Fonctionnalités DevOps
+| Gestion basique des projets, orientée code
+| Solution DevOps complète (CI/CD, monitoring, Kubernetes)
+| Gestion des projets Agile via Jira et Trello
+|===
+
+=== ...
+
+
+[cols="1,3,3,3"]
+|===
+
+| Tarification
+| Plans gratuits et payants, avec des fonctionnalités limitées sur les repos privés
+| Version gratuite très complète, options payantes pour les grandes entreprises
+| Plan gratuit limité à 5 utilisateurs privés, puis payant
+|===
+
+== 3. Détails et Cas d'Usage
+
+=== 3.1 GitHub
+* Plateforme la plus populaire, idéale pour l'open source.
+* Utilisé principalement pour les **projets publics et privés**.
+* Intégration forte avec **GitHub Actions** et **GitHub Copilot**.
+* Recommandé pour les startups et les équipes collaborant avec une large communauté.
+
+=== 3.2 GitLab
+* Offre un **outil complet DevOps** avec CI/CD natif.
+* Meilleur choix pour les entreprises ayant besoin **d'un auto-hébergement** et d'un contrôle total.
+* Son modèle GitLab Flow permet un **workflow plus structuré**.
+* Supporte **Kubernetes et Docker** de manière avancée.
+
+=== 3.3 Bitbucket
+* Idéal pour les équipes utilisant **Jira** et l'écosystème Atlassian.
+* Offre un bon compromis entre **GitHub et GitLab** pour les entreprises travaillant avec **des workflows agiles**.
+* Support de Mercurial abandonné en 2020.
+* Bonne intégration avec **Bitbucket Pipelines** pour les déploiements automatisés.
+
+== 4. Conclusion : Quel Choisir ?
+- **Si vous travaillez sur des projets open-source → GitHub.**
+- **Si vous cherchez une solution DevOps tout-en-un → GitLab.**
+- **Si vous utilisez Jira et l’écosystème Atlassian → Bitbucket.**
+
+Chaque plateforme a ses avantages en fonction des besoins en développement et en gestion d'équipe.
+
+== 5. Ressources
+- [GitHub](https://github.com/)
+- [GitLab](https://about.gitlab.com/)
+- [Bitbucket](https://bitbucket.org/)

@@ -1,0 +1,60 @@
+= Déclencher un conflit volontairement
+Voici un scénario typique pour comprendre les conflits Git :
+[source,bash]
+
+git init
+echo "Hello World" > fichier.txt
+git add fichier.txt
+git commit -m "Initial commit"
+
+git checkout -b feature
+echo "Modification depuis la branche feature" >> fichier.txt
+git commit -am "Ajout depuis la branche feature"
+
+git checkout main
+echo "Modification depuis la branche main" >> fichier.txt
+git commit -am "Ajout depuis la branche main"
+
+git merge feature
+
+=== Identification du conflit
+[source,bash]
+
+Auto-merging fichier.txt
+CONFLICT (content): Merge conflict in fichier.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+=== Résolution manuelle des conflits
+[source,diff]
+
+<<<<<<< HEAD
+Modification depuis la branche main
+
+Modification depuis la branche feature
+
+feature
+
+🛠 Explication des marqueurs Git :
+
+<<<<<<< HEAD → Partie actuelle (main).
+
+======= → Séparateur entre les deux versions.
+
+>>>>>>> feature → Partie venant de la branche feature.
+
+✅ Solution : Modifiez le fichier manuellement pour conserver la bonne version.
+
+=== Valider la résolution du conflit
+[source,bash]
+
+git add fichier.txt
+git commit -m "Résolution du conflit dans fichier.txt"
+git status
+
+=== Conclusion
+
+✔ git status : Montre l’état des fichiers dans le dépôt (modifiés, stagés, non suivis).
+✔ git diff : Affiche les différences avant git add, et git diff --staged montre les différences avant git commit.
+✔ git merge et git rebase peuvent provoquer des conflits nécessitant une résolution manuelle.
+✔ Utiliser git mergetool ou un éditeur comme VS Code facilite la gestion des conflits.
+✔ Maîtriser la résolution de conflits est une compétence essentielle pour tout développeur travaillant en équipe ! 🚀

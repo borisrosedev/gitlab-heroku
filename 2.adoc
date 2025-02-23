@@ -1,0 +1,146 @@
+== Différences entre Git et les autres systèmes de versionnement (SVN, Mercurial)
+
+Les systèmes de gestion de versions (VCS – Version Control Systems) permettent de suivre les modifications du code, collaborer efficacement et éviter les conflits dans les projets de développement. 
+
+=== ...
+
+Parmi les principaux outils, on retrouve Git, SVN (Subversion) et Mercurial.
+
+=== Git vs SVN (Subversion)
+
+==== Modèle centralisé vs décentralisé
+
+[cols="2,2", options="header"]
+|===
+| Critère | Git (Décentralisé) | SVN (Centralisé)
+| Architecture | Chaque développeur possède une copie complète du dépôt. | Un seul serveur central stocke le code source et l'historique.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Dépendance au réseau | Peut travailler en mode hors-ligne (commits, branches, rebase locaux). | Nécessite une connexion au serveur pour toutes les opérations.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Performance | Très rapide car la majorité des opérations sont locales. | Plus lent car dépend du serveur central.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Gestion des branches | Branches légères, faciles à créer et à fusionner (git branch, git merge). | Création de branches lourde, nécessite une copie du répertoire.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Gestion des conflits | Gestion avancée des conflits grâce aux outils de fusion (git merge, git rebase). | Résolution plus complexe et parfois manuelle.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Utilisation dans DevOps | Parfaitement intégré aux pipelines CI/CD et automatisation des déploiements. | Moins flexible pour l'automatisation.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Utilisation | GitHub, GitLab, Bitbucket, projets open source et entreprises modernes. | Entreprises traditionnelles, anciennes bases de code.
+|===
+
+=== Conclusion : 
+
+Git est plus flexible, rapide et adapté aux environnements modernes. SVN est toujours utilisé pour des projets nécessitant un contrôle centralisé strict.
+
+=== Git vs Mercurial
+
+==== Deux systèmes décentralisés, mais avec des différences clés
+
+[cols="2,2", options="header"]
+|===
+| Critère | Git | Mercurial
+| Philosophie | Conçu pour la performance et la flexibilité. | Conçu pour la simplicité et la facilité d’utilisation.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Complexité | Plus complexe, avec des commandes avancées (git rebase, git cherry-pick). | Plus simple à prendre en main (hg commit, hg push).
+
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Branches et workflows | Supporte plusieurs workflows (Git Flow, Trunk-based Development). | Support plus limité des branches, favorise des clones distincts.
+
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Gestion des conflits | Très puissant avec git merge et git rebase. | Moins flexible, mais plus prévisible.
+| Performance | Très rapide et optimisé pour les grands projets. | Moins performant pour les très grands dépôts.
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Adoption | Dominant dans l'industrie (GitHub, GitLab, Bitbucket). | Principalement utilisé par certaines entreprises spécifiques (ex : Facebook avant leur passage à Git).
+|===
+
+✅ Conclusion : Git est plus puissant et plus utilisé, tandis que Mercurial est plus simple mais a perdu en popularité face à Git.
+
+=== En résumé : Quand utiliser quoi ?
+
+[cols="2,2", options="header"]
+|===
+| Système | Quand l'utiliser ?
+| Git | Pour la majorité des projets modernes, grâce à son adoption massive, sa rapidité et son écosystème (GitHub, GitLab).
+
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| SVN | Pour des environnements nécessitant un contrôle strict avec un serveur centralisé, mais son usage décline.
+
+|===
+
+=== ...
+
+[cols="2,2"]
+|===
+| Mercurial | Pour des projets nécessitant une interface plus simple que Git, bien que son adoption ait diminué.
+|===
+
+== Conclusion
+
+
+* Git domine aujourd’hui grâce à sa flexibilité, sa gestion des branches efficace et son adoption massive.
+
+=== ...
+
+* SVN reste pertinent dans certains environnements traditionnels mais est moins utilisé.
+
+=== ...
+
+* Mercurial, bien que simple, est de moins en moins populaire face à Git.
+
+
+

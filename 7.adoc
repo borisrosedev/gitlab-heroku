@@ -1,0 +1,132 @@
+= Suivi des modifications avec `git status` et `git diff`
+
+Lorsque vous travaillez sur un projet Git, il est crucial de suivre les modifications effectuées sur vos fichiers avant de les valider (`commit`). Git propose plusieurs commandes pour vérifier l'état des fichiers dans le dépôt, notamment `git status` et `git diff`.
+
+== 1️⃣ `git status` – Vérifier l'état des fichiers
+
+La commande `git status` permet de voir l'état actuel des fichiers dans votre dépôt. Elle indique :
+
+- Les fichiers modifiés.
+- Les fichiers stagés (ajoutés avec `git add` mais non encore commités).
+- Les fichiers non suivis (nouveaux fichiers non encore ajoutés à Git).
+- L’état du `HEAD` et la branche courante.
+
+=== ✅ Syntaxe :
+[source,bash]
+----
+git status
+----
+
+=== 🎯 Exemple de sortie :
+[source,bash]
+----
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes)
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        newfile.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+----
+
+=== 🛠 Explication :
+
+- `modified: index.html` → Ce fichier a été modifié mais n’a pas encore été ajouté (`git add` nécessaire).
+- `Untracked files: newfile.js` → Ce fichier n’est pas encore suivi par Git.
+- **Proposition de commandes** : Git suggère `git add` pour inclure les modifications dans le prochain commit ou `git restore` pour annuler les changements.
+
+== 2️⃣ `git diff` – Voir les différences entre les versions
+
+La commande `git diff` permet de voir les modifications exactes apportées aux fichiers avant qu’elles ne soient stagées ou commit.
+
+=== 🔹 Comparer les modifications non ajoutées (`git diff`)
+Si vous avez modifié un fichier mais pas encore exécuté `git add`, utilisez :
+[source,bash]
+----
+git diff
+----
+
+=== 🎯 Exemple de sortie :
+[source,diff]
+----
+diff --git a/index.html b/index.html
+index 83d5a6b..e6d1f09 100644
+--- a/index.html
++++ b/index.html
+@@ -3,7 +3,7 @@
+ <title>My Website</title>
+-<h1>Bienvenue sur mon site</h1>
++<h1>Bienvenue sur mon site web !</h1>
+----
+
+=== 🛠 Explication :
+
+- Les lignes en rouge (`-`) indiquent les parties supprimées.
+- Les lignes en vert (`+`) indiquent les nouvelles parties ajoutées.
+
+=== 🔹 Comparer les modifications ajoutées mais non commités (`git diff --staged`)
+Si vous avez utilisé `git add`, mais pas encore `git commit`, vous pouvez voir les différences avec :
+[source,bash]
+----
+git diff --staged
+----
+Cela affichera les modifications qui seront incluses dans le prochain commit.
+
+=== 🔹 Comparer un fichier spécifique
+Si vous voulez voir uniquement les modifications d’un fichier spécifique :
+[source,bash]
+----
+git diff nom-du-fichier
+----
+
+Exemple :
+[source,bash]
+----
+git diff index.html
+----
+
+== 3️⃣ Exercice pratique (Workflow complet)
+
+=== 1️⃣ Créer un dépôt Git et ajouter un fichier :
+[source,bash]
+----
+git init
+echo "Hello World" > hello.txt
+git add hello.txt
+git commit -m "Ajout du fichier hello.txt"
+----
+
+=== 2️⃣ Modifier le fichier et voir les changements :
+[source,bash]
+----
+echo "Ajout d'une nouvelle ligne" >> hello.txt
+git status  # Vérifier l’état des fichiers
+git diff  # Voir les différences
+----
+
+=== 3️⃣ Ajouter les modifications et voir les différences avant commit :
+[source,bash]
+----
+git add hello.txt
+git diff --staged  # Comparer les modifications ajoutées
+----
+
+=== 4️⃣ Commit des modifications :
+[source,bash]
+----
+git commit -m "Ajout d'une nouvelle ligne à hello.txt"
+git status  # Vérifier qu'il n'y a plus de modifications en attente
+----
+
+== 🎯 Conclusion
+
+✔ `git status` : Montre l’état des fichiers dans le dépôt (modifiés, stagés, non suivis).
+✔ `git diff` : Affiche les différences avant `git add`, et `git diff --staged` montre les différences avant `git commit`.
+✔ Ces commandes sont essentielles pour éviter les erreurs et suivre les modifications avec précision. 🚀
+
+💬 **Besoin d’un exemple plus approfondi ou d’un cas d’usage spécifique ? 😊**
+

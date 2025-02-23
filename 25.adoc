@@ -1,0 +1,80 @@
+= Introduction a Heroku
+
+Heroku est une plateforme cloud en tant que service (PaaS) qui permet de déployer, gérer et faire évoluer des applications. Elle simplifie le processus de mise en production en offrant un environnement géré avec une prise en charge automatique des dépendances, de la scalabilité et du monitoring.
+
+== Fonctionnalités principales
+
+Support multi-langage : Heroku prend en charge plusieurs langages de programmation comme Node.js, Python, Ruby, Java, PHP, Go et Scala.
+
+Facilité de déploiement : Utilisation de Git pour pousser du code directement vers Heroku.
+
+Scalabilité : Possibilité d'ajouter dynamiquement des dynos (unités de traitement) pour s'adapter à la demande.
+
+Add-ons : Large bibliothèque d'outils supplémentaires tels que bases de données, monitoring, cache, authentification, etc.
+
+Intégration continue : Intégration avec GitHub et d'autres outils CI/CD.
+
+Sécurité : Gestion des certificats SSL, conformité SOC 2, et protections contre les attaques courantes.
+
+== Architecture et fonctionnement
+
+=== Déploiement
+Le processus de déploiement sur Heroku suit plusieurs étapes :
+
+Pousser le code : L'utilisateur envoie son code source vers Heroku via git push heroku main.
+
+Buildpack : Heroku détecte automatiquement le langage utilisé et applique un buildpack correspondant pour installer les dépendances et compiler le projet.
+
+Exécution : Une fois l'application compilée, elle est exécutée dans un ou plusieurs dynos.
+
+Exposition : Heroku assigne un domaine public pour accéder à l'application.
+
+=== Dynos et Scalabilité
+
+Heroku utilise des dynos, qui sont des conteneurs légers isolés permettant d'exécuter des applications. La scalabilité est assurée de manière horizontale en ajoutant plus de dynos ou verticalement en utilisant des dynos plus performants.
+
+=== Base de données et stockage
+
+Heroku propose des solutions de stockage et de bases de données telles que :
+
+Heroku Postgres : Base de données SQL managée.
+
+Heroku Redis : Solution de cache et de file d'attente.
+
+Amazon S3 Add-on : Stockage d'objets pour les fichiers statiques.
+
+== Cas d'utilisation
+
+Heroku est utilisé pour :
+
+Héberger des applications web et API REST.
+
+Gérer des microservices.
+
+Tester et prototyper rapidement de nouvelles fonctionnalités.
+
+Exécuter des applications serverless.
+
+== Avantages et inconvénients
+
+=== Avantages
+
+Simplicité et rapidité de mise en production.
+
+Gestion automatique des dépendances.
+
+Scalabilité facile à configurer.
+
+Large écosystème d'add-ons.
+
+=== Inconvénients
+
+Coût plus élevé que d'autres solutions IaaS comme AWS ou GCP.
+
+Limitations en matière de personnalisation.
+
+Temps d'endormissement des dynos gratuits.
+
+== Conclusion
+
+Heroku est une solution idéale pour les startups et les développeurs souhaitant une plateforme simple et efficace pour déployer leurs applications sans gérer l'infrastructure sous-jacente. Toutefois, son coût et ses limitations peuvent être des freins pour des projets nécessitant une forte personnalisation ou une optimisation des coûts.

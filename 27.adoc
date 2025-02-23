@@ -1,0 +1,116 @@
+= Comparaison de Heroku avec d'autres PaaS
+
+Heroku est une plateforme cloud en tant que service (PaaS) qui simplifie le déploiement et la gestion des applications. Comparons-le avec d'autres solutions populaires : AWS Elastic Beanstalk, Netlify et Vercel.
+
+== Installation et configuration de l'Heroku CLI
+
+L'Heroku CLI permet de gérer les applications directement depuis la ligne de commande.
+
+=== Installation
+
+==== Sur macOS
+
+brew tap heroku/brew
+brew install heroku
+
+==== Sur Windows
+
+Téléchargez et installez l'Heroku CLI depuis le site officiel : https://devcenter.heroku.com/articles/heroku-cli
+
+==== Sur Linux
+
+curl https://cli-assets.heroku.com/install.sh | sh
+
+=== Configuration
+
+Connexion à Heroku
+
+heroku login
+
+Cette commande ouvre un navigateur pour l'authentification.
+
+Création d'une nouvelle application
+
+heroku create mon-app
+
+Ajout d'un dépôt Git distant
+
+
+
+git remote add heroku https://git.heroku.com/mon-app.git
+
+
+4. **Déploiement de l'application**
+```sh
+git push heroku main
+
+Vérification de l'application en ligne
+
+heroku open
+
+Gestion des logs
+
+heroku logs --tail
+
+== AWS Elastic Beanstalk
+
+Avantages :
+
+Forte intégration avec les services AWS.
+
+Supporte plusieurs langages (Java, .NET, PHP, Node.js, etc.).
+
+Automatisation de la mise en production et de la scalabilité.
+
+Inconvénients :
+
+Plus complexe à configurer que Heroku.
+
+Moins d'outils intégrés pour les workflows DevOps.
+
+Nécessite une gestion plus avancée des ressources AWS.
+
+== Netlify
+
+Avantages :
+
+Spécialisé pour le déploiement de sites statiques et JAMstack.
+
+Intégration facile avec GitHub et CI/CD natif.
+
+Fonctions serverless intégrées.
+
+Inconvénients :
+
+Moins adapté aux applications backend complexes.
+
+Support limité pour les bases de données et le stockage avancé.
+
+== Vercel
+
+Avantages :
+
+Idéal pour les applications front-end et les frameworks modernes (Next.js, React).
+
+Déploiement instantané avec prévisualisation automatique.
+
+Optimisation des performances et des CDN.
+
+Inconvénients :
+
+Moins adapté aux applications backend complètes.
+
+Support limité pour les bases de données managées.
+
+== Conclusion
+
+Heroku est une solution équilibrée pour les applications full-stack, avec une grande facilité de gestion.
+
+AWS Elastic Beanstalk offre une puissance et une flexibilité accrues pour les utilisateurs expérimentés d'AWS.
+
+Netlify est idéal pour les sites statiques et les applications JAMstack.
+
+Vercel excelle pour le déploiement d’applications front-end modernes avec Next.js.
+
+Le choix dépend donc des besoins spécifiques de l'application et du niveau d'expertise en infrastructure cloud.
+

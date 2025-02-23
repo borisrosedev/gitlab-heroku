@@ -1,0 +1,66 @@
+= Migration et gestion des données sur Heroku
+
+Heroku permet de gérer facilement les bases de données et d’exécuter des migrations pour maintenir la structure des tables.
+
+== Prérequis
+
+Une application Rails déployée sur Heroku.
+
+Une base de données PostgreSQL ajoutée via heroku addons:create heroku-postgresql:hobby-dev.
+
+L’Heroku CLI installé sur votre machine.
+
+== Exécution des migrations
+
+Connexion à Heroku
+
+heroku login
+
+Exécution des migrations
+
+heroku run rails db:migrate --app NOM_DE_L_APP
+
+Cette commande exécute les migrations définies dans le répertoire db/migrate.
+
+Vérification de l’état des migrations
+
+heroku run rails db:migrate:status --app NOM_DE_L_APP
+
+Permet de voir quelles migrations ont été appliquées.
+
+== Gestion des données
+
+Affichage des enregistrements en base
+
+heroku run rails console --app NOM_DE_L_APP
+
+Dans la console Rails, vous pouvez exécuter des requêtes ActiveRecord :
+
+User.all
+
+Sauvegarde de la base de données
+
+heroku pg:backups:capture --app NOM_DE_L_APP
+
+Pour télécharger une sauvegarde :
+
+heroku pg:backups:download --app NOM_DE_L_APP
+
+Restauration d’une base de données
+
+heroku pg:backups:restore 'https://URL_DU_BACKUP' DATABASE_URL --app NOM_DE_L_APP
+
+== Nettoyage et maintenance
+
+Réindexation des tables :
+
+heroku pg:vacuum --app NOM_DE_L_APP
+
+Réparation des erreurs de base de données :
+
+heroku run rails db:reset --app NOM_DE_L_APP
+
+== Conclusion
+
+Heroku facilite la gestion des bases de données PostgreSQL avec une suite complète d’outils pour l’exécution des migrations, la sauvegarde et la restauration. Il est recommandé d'automatiser ces tâches dans un workflow CI/CD pour assurer la stabilité et la cohérence des données.
+
